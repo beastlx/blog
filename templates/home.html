@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>hi</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div style="display: flex;justify-content: flex-end; margin-right: 20px; position: absolute;">
+                    <h4 class="alert flash-msg">{{message}}</h4>
+                </div>
+         {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <h1 style="color: #E9D77C;margin-left: 30px;text-align: center;"><i>Blogs:</i> {{total}}</h1>
+ <div class="flex_box">
+        {% for blog in blogs %}
+        <div class="card">
+           <img class="img" src="{{url_for('static', filename='uploads/' + blog.image) }}" alt="" width="200px" height="200px">
+            <div class="subcard">
+            <p style="text-decoration: underline;"><span style="font-size: 18px;font-weight: 600;">Title:</span> {{blog.title}}</p>
+            <p><span style="font-size: 18px;font-weight: 600;">Content:</span> <br> {{blog.content}}</p>
+        </div>
+           <div style="margin-top: 10px;" class="buttons">
+             <a href="/viewblog/{{blog.title}}">
+               <button class="addblog">view blog</button> 
+             </a>
+             <a href="/delete/{{blog._id}}">
+               <button class="addblog">delete</button> 
+             </a>
+           </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,124 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, rgb(213, 175, 168), rgb(236, 162, 98));
+    color: white;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: brown;
+    position: sticky;
+    top: 0;
+}
+ul{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    font-weight: 600;
+}
+.home{
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 10px;
+    background-color: rgb(233, 215, 123);
+}
+.home:hover{
+    background-color: transparent;
+    color: white;
+}
+.addblog{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 10px;
+}
+.addblog:hover{
+    background-color: rgb(120, 31, 31);
+    text-decoration: underline;
+}
+
+.flex_box{
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card{
+    width: 400px;
+    margin: 10px;
+}
+.subcard{
+    color: black;
+    background-color: white;
+    padding: 8px;
+    border-radius: 10px;
+    margin-top: 10px;
+    height: 50vh;
+}
+
+.img{
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.viewcard{
+    width: 80%;
+}
+.viewimg{
+    height: 400px;
+}
+
+.centered{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(170, 150, 150);
+    width: 500px;
+    margin: auto;
+    margin-top: 4rem;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+input{
+    width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    color: brown;
+}
+label{
+    font-weight: 600;
+    color: black;
+}
+
+.centered{
+    border: solid burlywood;
+    display: flex;
+    width: 500px;
+    height: 350px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 400px;
+}

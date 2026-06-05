@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="centered">
+    <h1>Add page</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label for="title">Title:</label><br>
+        <input type="text" name="title" placeholder="Add title"> <br><br>
+        <label for="content">Content:</label>
+        <legend>
+            <textarea name="content" placeholder="Contents goes here" cols="50" rows="15"></textarea> <br>
+        </legend>
+        <input type="file" name="image"> <br><br>
+        <button class="addblog" style="width: 100%;">Post</button>
+    </form>
+</div>
+{% endblock %}

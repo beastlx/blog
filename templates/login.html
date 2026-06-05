@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% for category, message in messages %}
+        <div class="flash {{category}}">{{message}}</div>
+    {%endfor%}
+  {% endwith %}
+ <h1 style="text-align: center; margin: 20px;">welcome to the login page</h1> <br>
+    <div class="centered">
+        <div> 
+            <form action="" method="post">
+                <label for="">Email</label> <br>
+                <input type="email" name="email"> <br>
+                <label for="">password</label> <br>
+                <input type="password" name="password"> <br>
+                <label for="">remeber me </label>
+                <input type="checkbox" name="remember"> <br>
+                <button class="butto"> submit</button>
+            </form>
+            <p>Don't have an account? Click <a href="/"><button>here</button></a></p>
+        </div>
+    </div>
+{% endblock %}

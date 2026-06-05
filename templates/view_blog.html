@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="centered" style="width: 60%;">
+    <h1>Blog page</h1>
+    <div class="card viewcard">
+        <img class="img viewimg" src="{{url_for('static', filename='uploads/' + blog.image)}}" width="200px" height="200px"/>
+        <div class="subcard">
+            <p style="text-decoration: underline;"><span style="font-size: 18px;font-weight: 600;">Title:</span> {{blog.title}}</p>
+            <p><span style="font-size: 18px;font-weight: 600;">Content:</span> <br> {{blog.content}}</p>
+        </div>
+
+        <div class="buttons">
+            <a href="/updateblog/{{blog._id}} ">
+                <button style="margin-top: 10px;" class="addblog">Edit Blog</button>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

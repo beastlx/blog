@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<link rel="stylesheet" href="inde.css">
+    <h1 style="text-align: center; margin: 20px;">Registration page</h1> <br>
+
+    <div class="centered">
+        <div class="fom">
+            <form action="" method="post" enctype="multipart/form-data">
+                <label for="">Name</label> <br>
+                <input type="text" name="username"/> <br>
+                <label for="">email</label> <br>
+                <input type="email" name="useremail"> <br>
+                <label for="">password</label> <br>
+                <input type="password" name="password"> <br>
+                <label for="">confirm password</label> <br>
+                <input type="password" name="confirm"><br>
+                <button class="butto">submit</button>
+            </form>
+            <p>Already have an account? Click <a href="/login"><button>here</button></a></p>
+        </div>
+    </div>
+{%endblock%}
